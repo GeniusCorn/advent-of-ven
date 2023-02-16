@@ -1,12 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import router from '@/router'
+</script>
 
 <template>
-  <Counter :count="0" />
+  <h2>Advent of Vue</h2>
+  <ol>
+    <li @click="router.push('/joke')">Joke Generator</li>
+  </ol>
 </template>
 
 <style scoped></style>
-
-<route lang="yaml">
-meta:
-  layout: home
-</route>
