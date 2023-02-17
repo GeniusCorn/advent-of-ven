@@ -36,14 +36,14 @@ function clickButton() {
   <div w-screen h-screen flex="~ col" items-center justify-center gap-4>
     <h2>Joke Generator</h2>
 
-    <div flex="~ col" gap-4 v-if="setup" w-md>
+    <div v-if="setup" flex="~ col" gap-4 w-md>
       <div test="setup" bg-green-700 text-white p-4 rounded-lg self-start>
         {{ setup }}
       </div>
 
       <div
-        test="delivery"
         v-if="showDelivery"
+        test="delivery"
         bg-red-600
         text-white
         p-4
@@ -55,13 +55,13 @@ function clickButton() {
 
       <div
         test="button"
-        @click="clickButton"
         bg-green-500
         p-4
         rounded-lg
         text-center
         hover:opacity-70
         cursor-pointer
+        @click="clickButton"
       >
         {{ buttonText }}
       </div>

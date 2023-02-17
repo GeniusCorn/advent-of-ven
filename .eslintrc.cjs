@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     './.eslintrc-auto-import.json',
-    'plugin:vue/vue3-recommender',
+    'plugin:vue/vue3-recommended',
     'standard-with-typescript',
     'prettier'
   ],
@@ -21,6 +21,10 @@ module.exports = {
         parser: '@typescript-eslint/parser',
         project: './tsconfig.json'
       }
+    },
+    {
+      files: ['*.test.ts'],
+      extends: ['plugin:testing-library/vue']
     }
   ],
   parser: 'vue-eslint-parser',

@@ -1,13 +1,18 @@
-import { render, fireEvent, configure } from '@testing-library/vue'
+import {
+  render,
+  fireEvent,
+  configure,
+  type RenderResult
+} from '@testing-library/vue'
 import { rest } from 'msw'
 import { server } from '@/test/setup'
 import joke from '@/pages/joke.vue'
 
 configure({ testIdAttribute: 'test' })
 
-function wrapper() {
-  const wrapper = render(joke)
-  return wrapper
+function view(): RenderResult {
+  const view = render(joke)
+  return view
 }
 
 beforeEach(() => {
@@ -32,13 +37,13 @@ beforeEach(() => {
 })
 
 it('should show joke setup', async () => {
-  const { findByText } = wrapper()
+  const { findByText } = view()
 
   expect(await findByText('Foo setup')).toBeTruthy()
 })
 
 it('should show delivery when clicking button', async () => {
-  const { findByText, findByTestId } = wrapper()
+  const { findByText, findByTestId } = view()
 
   await fireEvent.click(await findByTestId('button'))
 
@@ -46,13 +51,13 @@ it('should show delivery when clicking button', async () => {
 })
 
 it('should show a new joke when clicking button', async () => {
-  const { findByText, findByTestId } = wrapper()
+  const { findByText, findByTestId } = view()
 
-  expect(await (await findByTestId('button')).innerHTML).toBe('Tell me')
+  expect((await findByTestId('button')).innerHTML).toBe('Tell me')
 
   await fireEvent.click(await findByTestId('button'))
 
-  expect(await (await findByTestId('button')).innerHTML).toBe('Another')
+  expect((await findByTestId('button')).innerHTML).toBe('Another')
 
   await fireEvent.click(await findByTestId('button'))
 

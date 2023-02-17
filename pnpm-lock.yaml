@@ -17,6 +17,7 @@ specifiers:
   eslint-plugin-import: ^2.27.5
   eslint-plugin-n: ^15.6.1
   eslint-plugin-promise: ^6.1.1
+  eslint-plugin-testing-library: ^5.10.2
   eslint-plugin-vue: ^9.9.0
   happy-dom: ^8.4.2
   msw: ^1.0.1
@@ -56,6 +57,7 @@ devDependencies:
   eslint-plugin-import: 2.27.5_mcvs2y73sfmcxqzpjj5lr7a2m4
   eslint-plugin-n: 15.6.1_eslint@8.34.0
   eslint-plugin-promise: 6.1.1_eslint@8.34.0
+  eslint-plugin-testing-library: 5.10.2_7kw3g6rralp5ps6mg3uyzz6azm
   eslint-plugin-vue: 9.9.0_eslint@8.34.0
   happy-dom: 8.4.2
   msw: 1.0.1_typescript@4.9.5
@@ -2220,6 +2222,19 @@ packages:
       eslint: ^7.0.0 || ^8.0.0
     dependencies:
       eslint: 8.34.0
+    dev: true
+
+  /eslint-plugin-testing-library/5.10.2_7kw3g6rralp5ps6mg3uyzz6azm:
+    resolution: {integrity: sha512-f1DmDWcz5SDM+IpCkEX0lbFqrrTs8HRsEElzDEqN/EBI0hpRj8Cns5+IVANXswE8/LeybIJqPAOQIFu2j5Y5sw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6'}
+    peerDependencies:
+      eslint: ^7.5.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
+      eslint: 8.34.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /eslint-plugin-vue/9.9.0_eslint@8.34.0:
