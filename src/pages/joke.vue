@@ -33,34 +33,34 @@ function clickButton() {
 </script>
 
 <template>
-  <div w-screen h-screen flex="~ col" items-center justify-center gap-4>
+  <div flex="~ col" h-screen w-screen items-center justify-center gap-4>
     <h2>Joke Generator</h2>
 
-    <div v-if="setup" flex="~ col" gap-4 w-md>
-      <div test="setup" bg-green-700 text-white p-4 rounded-lg self-start>
+    <div v-if="setup" flex="~ col" w-md gap-4>
+      <div test="setup" self-start rounded-lg bg-green-700 p-4 text-white>
         {{ setup }}
       </div>
 
       <div
         v-if="showDelivery"
         test="delivery"
-        bg-red-600
-        text-white
-        p-4
-        rounded-lg
         self-end
+        rounded-lg
+        bg-red-600
+        p-4
+        text-white
       >
         {{ delivery }}
       </div>
 
       <div
         test="button"
+        cursor-pointer
+        rounded-lg
         bg-green-500
         p-4
-        rounded-lg
         text-center
         hover:opacity-70
-        cursor-pointer
         @click="clickButton"
       >
         {{ buttonText }}
