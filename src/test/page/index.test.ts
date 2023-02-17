@@ -13,7 +13,7 @@ function wrapper() {
 }
 
 describe('index page', async () => {
-  it('mounts properly', async () => {
+  it('should be rendered', async () => {
     wrapper().getByText('Advent of Vue')
   })
 
