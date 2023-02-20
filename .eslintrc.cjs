@@ -5,9 +5,9 @@ module.exports = {
   },
   extends: [
     './.eslintrc-auto-import.json',
+    'standard-with-typescript',
     'plugin:vue/vue3-recommended',
     '@unocss',
-    'standard-with-typescript',
     'prettier'
   ],
   overrides: [

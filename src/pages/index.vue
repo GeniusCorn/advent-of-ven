@@ -6,6 +6,7 @@ import router from '@/router'
   <h2>Advent of Vue</h2>
   <ol>
     <li @click="router.push('/joke')">Joke Generator</li>
+    <li @click="router.push('/countdown')">Xmas Countdown</li>
   </ol>
 </template>
 

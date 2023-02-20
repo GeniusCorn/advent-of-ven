@@ -26,4 +26,14 @@ describe('index page', async () => {
     expect(push).toHaveBeenCalledOnce()
     expect(push).toHaveBeenCalledWith('/joke')
   })
+
+  it('click the countdown item link', async () => {
+    const countdownItem = view().getByText('Xmas Countdown')
+    const push = vi.spyOn(router, 'push')
+
+    await fireEvent.click(countdownItem)
+
+    expect(push).toHaveBeenCalledOnce()
+    expect(push).toHaveBeenCalledWith('/countdown')
+  })
 })

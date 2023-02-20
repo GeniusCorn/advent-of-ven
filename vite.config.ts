@@ -24,7 +24,7 @@ export default defineConfig({
         /\.vue\?vue/ // .vue
       ],
 
-      imports: ['vue', 'vue-router', 'vue/macros', 'vitest'],
+      imports: ['vue', 'vue-router', 'vue/macros', 'vitest', '@vueuse/core'],
 
       dirs: [],
 

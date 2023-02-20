@@ -1,14 +1,7 @@
-import {
-  render,
-  fireEvent,
-  configure,
-  type RenderResult
-} from '@testing-library/vue'
+import { render, fireEvent, type RenderResult } from '@testing-library/vue'
 import { rest } from 'msw'
 import { server } from '@/test/setup'
 import joke from '@/pages/joke.vue'
-
-configure({ testIdAttribute: 'test' })
 
 function view(): RenderResult {
   const view = render(joke)
