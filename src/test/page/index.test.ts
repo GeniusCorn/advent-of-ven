@@ -17,7 +17,7 @@ describe('index page', async () => {
     view().getByText('Advent of Vue')
   })
 
-  it('click the joke item link', async () => {
+  it('router should push to joke when clicking the joke link', async () => {
     const jokeItem = view().getByText('Joke Generator')
     const push = vi.spyOn(router, 'push')
 
@@ -27,7 +27,7 @@ describe('index page', async () => {
     expect(push).toHaveBeenCalledWith('/joke')
   })
 
-  it('click the countdown item link', async () => {
+  it('router should push to countdown when clicking countdown link', async () => {
     const countdownItem = view().getByText('Xmas Countdown')
     const push = vi.spyOn(router, 'push')
 
@@ -35,5 +35,15 @@ describe('index page', async () => {
 
     expect(push).toHaveBeenCalledOnce()
     expect(push).toHaveBeenCalledWith('/countdown')
+  })
+
+  it('router should push to tree when clicking tree link', async () => {
+    const treeItem = view().getByText('Xmas Tree')
+    const push = vi.spyOn(router, 'push')
+
+    await fireEvent.click(treeItem)
+
+    expect(push).toHaveBeenCalledOnce()
+    expect(push).toHaveBeenCalledWith('/tree')
   })
 })

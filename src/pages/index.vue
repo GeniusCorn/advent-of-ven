@@ -7,6 +7,7 @@ import router from '@/router'
   <ol>
     <li @click="router.push('/joke')">Joke Generator</li>
     <li @click="router.push('/countdown')">Xmas Countdown</li>
+    <li @click="router.push('/tree')">Xmas Tree</li>
   </ol>
 </template>
 
