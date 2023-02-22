@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@faker-js/faker': ^7.6.0
   '@iconify-json/tabler': ^1.1.61
   '@testing-library/vue': ^6.6.1
   '@types/node': ^18.13.0
@@ -45,6 +46,7 @@ dependencies:
   vue-router: 4.1.6_vue@3.2.47
 
 devDependencies:
+  '@faker-js/faker': 7.6.0
   '@iconify-json/tabler': 1.1.61
   '@testing-library/vue': 6.6.1_a2ihsjreowava2sm4iorpgwkom
   '@types/node': 18.13.0
@@ -516,6 +518,11 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@faker-js/faker/7.6.0:
+    resolution: {integrity: sha512-XK6BTq1NDMo9Xqw/YkYyGjSsg44fbNwYRx7QK2CuoQgyy+f1rrTDHoExVM5PsyXCtfl2vs2vVJ0MN0yN6LppRw==}
+    engines: {node: '>=14.0.0', npm: '>=6.0.0'}
     dev: true
 
   /@humanwhocodes/config-array/0.11.8:

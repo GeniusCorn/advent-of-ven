@@ -46,4 +46,14 @@ describe('index page', async () => {
     expect(push).toHaveBeenCalledOnce()
     expect(push).toHaveBeenCalledWith('/tree')
   })
+
+  it('router should push to gift when clicking gift link', async () => {
+    const giftItem = view().getByText('Gift Label')
+    const push = vi.spyOn(router, 'push')
+
+    await fireEvent.click(giftItem)
+
+    expect(push).toHaveBeenCalledOnce()
+    expect(push).toHaveBeenCalledWith('/gift')
+  })
 })
